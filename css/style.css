@@ -556,6 +556,21 @@ p {
 .wave-info {
   max-width: 600px;
 }
+@media (max-width: 620px) {
+  .wave-info {
+    max-width: 500px;
+  }
+}
+@media (max-width: 520px) {
+  .wave-info {
+    max-width: 400px;
+  }
+}
+@media (max-width: 425px) {
+  .wave-info {
+    max-width: 300px;
+  }
+}
 
 .wave-content-slider .slick-dots {
   padding-left: 0;
@@ -620,6 +635,12 @@ p {
     max-width: none;
   }
 }
+@media (max-width: 425px) {
+  .wave-content__subtitle {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}
 .wave-content__text {
   max-width: 550px;
   font-family: "Inter", sans-serif;
@@ -632,6 +653,11 @@ p {
 @media (max-width: 1100px) {
   .wave-content__text {
     max-width: none;
+  }
+}
+@media (max-width: 425px) {
+  .wave-content__text {
+    font-size: 14px;
   }
 }
 .wave-content__btn {
@@ -660,6 +686,11 @@ p {
   margin: 0 auto;
   overflow: hidden;
 }
+@media (max-width: 520px) {
+  .artists {
+    padding: 45px 0;
+  }
+}
 
 .container-autoplay-title {
   display: -webkit-box;
@@ -678,21 +709,16 @@ p {
 .autoplay-title {
   width: 100%;
   font-family: "Audiowide", cursive;
-  font-size: 75px;
+  font-size: calc(25px + 3.125vw);
   font-weight: 400;
   line-height: 1.4em;
   color: #fff;
   text-transform: uppercase;
   white-space: nowrap;
 }
-@media (max-width: 959px) {
+@media screen and (max-width: 768px) {
   .autoplay-title {
-    font-size: 60px;
-  }
-}
-@media (max-width: 768px) {
-  .autoplay-title {
-    font-size: 50px;
+    font-size: calc(25px + 85 * (100vw - 320px) / 1600);
   }
 }
 
@@ -721,6 +747,11 @@ p {
   max-width: 1170px;
   margin: 0 auto;
   padding: 120px 0 20px 0;
+}
+@media screen and (max-width: 520px) {
+  .gallery-conteiner {
+    padding: 30px 0 20px 0;
+  }
 }
 
 .gallery-grid {
@@ -864,7 +895,7 @@ p {
   }
 }
 .tabs__nav-btn {
-  width: 280px;
+  width: calc(85px + 12.1875vw);
   height: 70px;
   font-family: "DM Mono", monospace;
   font-size: 16px;
@@ -875,9 +906,14 @@ p {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 959px) {
+  .tabs__nav-btn {
+    font-size: calc(10px + 10.2 * (100vw - 320px) / 1600);
+  }
+}
 @media (max-width: 768px) {
   .tabs__nav-btn {
-    width: 150px;
+    width: calc(85px + 331.5 * (100vw - 320px) / 1600);
   }
 }
 .tabs__nav-btn span {
@@ -886,6 +922,12 @@ p {
   display: flex;
   position: relative;
   left: 20px;
+  max-width: 140px;
+}
+@media (max-width: 768px) {
+  .tabs__nav-btn span {
+    left: 0;
+  }
 }
 .tabs__nav-btn.active-tab {
   background: #313131;
@@ -955,17 +997,27 @@ p {
 .bg-paralax {
   position: relative;
   background-image: url(../img/bg_paralax.png);
-  min-height: 240px;
+  min-height: calc(80px + 10vw);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: 5;
 }
+@media screen and (max-width: 768px) {
+  .bg-paralax {
+    min-height: calc(80px + 272 * (100vw - 320px) / 1600);
+  }
+}
 
 .roadmap {
   position: relative;
   padding: 100px 0 50px 0;
+}
+@media screen and (max-width: 560px) {
+  .roadmap {
+    padding: 20px 0 30px 0;
+  }
 }
 .roadmap__title {
   text-align: center;
@@ -1009,6 +1061,11 @@ p {
           transform: translate(0px, 120%);
   opacity: 0;
 }
+@media screen and (max-width: 560px) {
+  .roadmap__line {
+    display: none;
+  }
+}
 .roadmap__line.anime-active {
   -webkit-transform: translate(0px, 0px);
       -ms-transform: translate(0px, 0px);
@@ -1041,6 +1098,11 @@ p {
       -ms-transform: translate(0px, 120%);
           transform: translate(0px, 120%);
   opacity: 0;
+}
+@media screen and (max-width: 560px) {
+  .roadmap-card {
+    margin: 0 10px 50px 10px;
+  }
 }
 .roadmap-card:last-child {
   margin-bottom: 50px;
@@ -1114,6 +1176,18 @@ p {
           align-items: center;
   padding: 30px 14px 30px 14px;
 }
+@media screen and (max-width: 425px) {
+  .roadmap-card__main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+}
 .roadmap-card__text {
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -1125,6 +1199,11 @@ p {
 .roadmap-card__text p:nth-child(1) {
   padding: 0 0 20px 24px;
 }
+@media screen and (max-width: 425px) {
+  .roadmap-card__text p:nth-child(1) {
+    padding: 0 0 20px 0px;
+  }
+}
 
 .team {
   background: #000;
@@ -1132,6 +1211,11 @@ p {
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
+}
+@media screen and (max-width: 425px) {
+  .team {
+    padding: 30px 0 10px 0;
+  }
 }
 
 .team-slider {
@@ -1146,6 +1230,11 @@ p {
   background: #000;
   opacity: 0.5;
   margin: 0 auto;
+}
+@media screen and (max-width: 425px) {
+  .team-slider__item {
+    width: 275px !important;
+  }
 }
 .team-slider__item:hover {
   opacity: 1;
@@ -1164,6 +1253,11 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .team-slider .slick-track {
+    gap: 0;
+  }
 }
 .team-slider__photo {
   display: block;
@@ -1265,6 +1359,11 @@ p {
   max-width: 1600px;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 425px) {
+  .discord {
+    padding-bottom: 80px;
+  }
+}
 
 .discord-container {
   display: -webkit-box;
@@ -1278,6 +1377,14 @@ p {
           align-items: center;
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (max-width: 620px) {
+  .discord-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .discord-content {
@@ -1289,6 +1396,11 @@ p {
   -webkit-transition: all 1.8s ease-in-out 0s;
   -o-transition: all 1.8s ease-in-out 0s;
   transition: all 1.8s ease-in-out 0s;
+}
+@media screen and (max-width: 620px) {
+  .discord-content {
+    text-align: center;
+  }
 }
 .discord-content.anime-active {
   -webkit-transform: translate(0px, 0px);
@@ -1328,6 +1440,11 @@ p {
   width: 245px;
   height: 45px;
 }
+@media screen and (max-width: 620px) {
+  .discord-content__btn {
+    margin: 0 auto;
+  }
+}
 .discord-content__btn span {
   display: block;
   width: 20px;
@@ -1357,6 +1474,11 @@ p {
   -o-transition: all 1.8s ease-in-out 0s;
   transition: all 1.8s ease-in-out 0s;
 }
+@media screen and (max-width: 620px) {
+  .discord-icon {
+    display: none;
+  }
+}
 .discord-icon.anime-active {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -1385,6 +1507,16 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 50px 0;
+    gap: 40px;
+  }
+}
 
 .footer-logo {
   -ms-flex-preferred-size: 30%;
@@ -1399,6 +1531,31 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .footer-logo {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer-logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
 }
 .footer-logo__text {
   font-family: "DM Mono", monospace;
@@ -1418,6 +1575,13 @@ p {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
+@media screen and (max-width: 768px) {
+  .nav-footer {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 40px;
+  }
+}
 
 .list-footer {
   -webkit-box-orient: vertical;
@@ -1433,6 +1597,11 @@ p {
 .list-footer__item {
   list-style: none;
 }
+@media screen and (max-width: 425px) {
+  .list-footer__link {
+    font-size: 14px;
+  }
+}
 
 .footer-icons {
   display: -webkit-box;
@@ -1444,6 +1613,14 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .footer-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
 }
 .footer-icons svg:nth-child(1):hover > rect {
   fill: #00acee;
