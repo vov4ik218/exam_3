@@ -11,26 +11,3 @@
     line-height: $ln-height;
     color: $f-color;
 }
-
-// @mixin column-center($column, $center) {
-//     flex-direction: $column;
-//     text-align: $center;
-// }
-
-// @mixin posn-top_rt($absolute, $top, $right, $z-index) {
-//     position: $absolute;
-//     top: $top;
-//     right: $right;
-//     z-index: $z-index;
-// }
-
-// @mixin border($border, $radius, $shadow) {
-//     border: $border;
-//     border-radius: $radius;
-//     box-shadow: $shadow
-// }
-
-// @mixin width-height($width, $height) {
-//     width: $width;
-//     height: $height;
-// }

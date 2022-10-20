@@ -8,9 +8,6 @@ body {
     padding: 0;
     font-weight: $font_weight_body;
     font-size: $font_size_body;
-    // background: no-repeat center url(../img/peakpx.jpg);
-    // background-size: 100% 100%;
-    //background: linear-gradient(171deg, #121212,#181818);
     background: #000;
 }
 
@@ -25,8 +22,6 @@ p {
 .header {
     max-width: 1600px;
     margin: 0 auto;
-
-
     background: #000000;
 }
 
@@ -43,6 +38,12 @@ p {
     }
 }
 
+.img-contain {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
 .logo-img {
     display: block;
     width: 100px;
@@ -51,9 +52,6 @@ p {
     padding-right: 10px;
 
     img {
-        object-fit: contain;
-        width: 100%;
-        height: auto;
 
         &:active {
             filter: contrast(0.6);
@@ -225,12 +223,6 @@ p {
         cursor: pointer;
         border: 1px solid #000;
 
-        & img {
-            width: 100%;
-            object-fit: contain;
-            height: auto;
-        }
-
         &:active {
             filter: contrast(0.6);
             transition: transform 0.4s;
@@ -259,7 +251,6 @@ p {
         display: none;
     }
 }
-
 
 //-------------------------------main---------------------------// 
 .main {
@@ -315,8 +306,6 @@ p {
     border: none;
     box-shadow: 2px 1px 5px #ffffff52;
 
-
-
     &:hover {
         background: #8DFD1B;
         box-shadow: 1px 1px 3px #bbe98a;
@@ -329,8 +318,6 @@ p {
         color: #000;
     }
 }
-
-
 
 .meta-label-slider {
     max-width: 785px;
@@ -347,15 +334,12 @@ p {
         cursor: pointer;
         margin: 0 auto;
 
-
         @media (max-width: 1100px) {
             width: 200px !important;
         }
 
         & img {
             width: 70%;
-            object-fit: contain;
-            height: auto;
             margin: auto;
         }
     }
@@ -401,7 +385,7 @@ p {
 }
 
 ////section-2---------------------//  
-
+/// 
 .wave {
     max-width: 1160px;
     margin: 0 auto;
@@ -439,28 +423,14 @@ p {
         position: relative;
         opacity: 1;
         cursor: pointer;
-
-        & img {
-            width: 100%;
-            object-fit: contain;
-            height: auto;
-        }
     }
 }
 
 .wave-info {
     max-width: 600px;
 
-    @media (max-width: 620px) {
-        max-width: 500px;
-    }
-
-    @media (max-width: 520px) {
-        max-width: 400px;
-    }
-
-    @media (max-width: 425px) {
-        max-width: 300px;
+    @media screen and (max-width: 768px) {
+        max-width: calc(300px + (300 + 300 * 0.7) * ((100vw - 320px) / 1600));
     }
 }
 
@@ -510,6 +480,22 @@ p {
 
 .wave-content {
 
+    &__conreiner {
+        @media (max-width: 768px) {
+            height: calc(500px + (40 + 40 * 0.7) * ((100vw - 320px) / 1600));
+        }
+
+        @media (max-width: 620px) {
+            height: calc(530px + (40 + 40 * 0.7) * ((100vw - 320px) / 1600));
+        }
+
+        @media (max-width: 560px) {
+            height: calc(400px + (40 + 40 * 0.7) * ((100vw - 320px) / 1600));
+        }
+        @media (max-width: 425px) {
+            height: 475px;
+        }
+    }
 
     &__subtitle {
         display: block;
@@ -522,7 +508,7 @@ p {
             max-width: none;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 560px) {
             padding-left: 10px;
             font-size: 16px;
         }
@@ -537,7 +523,7 @@ p {
             max-width: none;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 560px) {
             font-size: 14px;
         }
     }
@@ -551,7 +537,6 @@ p {
         border: 1px solid #8DFD1B;
         margin-top: 35px;
 
-
         &:hover {
             background: #8DFD1B;
             color: #000000;
@@ -563,7 +548,6 @@ p {
     }
 }
 
-//section 3//----------------------
 .artists {
     background: #000000;
     padding: 110px 0;
@@ -678,8 +662,6 @@ p {
     }
 }
 
-//section 4 TABS---------------------// 
-
 .story-tabs {
     padding: 50px 0;
 
@@ -713,7 +695,6 @@ p {
     opacity: 0;
     transition: all 1.8s ease-in-out 0s;
     transform: scale(0.5);
-
 
     @media (max-width: 1200px) {
         margin: 50px 20px 100px;
@@ -821,12 +802,6 @@ p {
     @media (max-width: 959px) {
         display: none;
     }
-
-    & img {
-        width: 100%;
-        object-fit: contain;
-        height: auto;
-    }
 }
 
 .bg-paralax {
@@ -904,7 +879,6 @@ p {
         z-index: 1;
     }
 }
-
 
 .roadmap-card {
     position: relative;
@@ -993,8 +967,6 @@ p {
     }
 }
 
-//section last slider main---------------------------//
-
 .team {
     background: #000;
     padding: 30px 0 110px 0;
@@ -1045,12 +1017,6 @@ p {
     &__photo {
         display: block;
         cursor: pointer;
-
-        img {
-            width: 100%;
-            object-fit: contain;
-            height: auto;
-        }
     }
 
     &__content {
@@ -1122,8 +1088,6 @@ p {
     }
 }
 
-//------------------------last section------Discord-----------------// 
-
 .discord {
     max-width: 1600px;
     padding-bottom: 120px;
@@ -1190,12 +1154,6 @@ p {
             height: 20px;
             padding-right: 8px;
             filter: invert(1);
-
-            & img {
-                width: 100%;
-                object-fit: contain;
-                height: auto;
-            }
         }
 
         &:hover>span {
@@ -1217,15 +1175,8 @@ p {
     &.anime-active {
         transform: scale(1);
     }
-
-    & img {
-        width: 100%;
-        object-fit: contain;
-        height: auto;
-    }
 }
 
-//------------------footer--------------------------------// 
 .footer {
     padding: 0 20px;
     background: #42006A;
@@ -1290,7 +1241,6 @@ p {
     }
 
     &__link {
-
         @media screen and (max-width: 425px) {
             font-size: 14px;
         }

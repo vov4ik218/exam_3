@@ -7,26 +7,7 @@ $(document).ready(function () {
     })
 })
 
-//--------------------------MOVE-BLOCK-------------------------------------//
-
-// const iconsStatic = document.querySelector('#icons-off');
-// const iconsInNav = document.querySelector('#list');
-
-// function moveBlockIcons() {
-//     iconsInNav.after(iconsStatic);
-//     iconsStatic.style.paddingTop = '15px';
-// }
-// function disableMoveBlockIcons() {
-//     iconsInNav.after();
-//     iconsStatic.style.paddingTop = '0';
-// }
-// if (window.screen.availWidth <= 768) {
-//     moveBlockIcons();
-// }
-// else disableMoveBlockIcons();
-
 //---------------SCROLL----------------------//---------------------
-
 function scrollTo(element) {
     window.scroll({
         left: 0,
@@ -50,8 +31,6 @@ for (let link of links) {
         }
     })
 }
-
-
 
 //------------------------GALLERY-----//////-------------------------------
 const showMoreBtn = document.querySelector('#show-more');
@@ -81,7 +60,6 @@ showMoreBtn.addEventListener('click', () => {
         showMoreBtn.style.display = 'none';
     }
 });
-
 
 //-----------------------TABS----------------------//---------------------------
 const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
@@ -153,3 +131,21 @@ if (animItems.length > 0) {
     }, 300);
 
 }
+
+//--------------------------MOVE-BLOCK-------------------------------------//
+
+// const iconsStatic = document.querySelector('#icons-off');
+// const iconsInNav = document.querySelector('#list');
+
+// function moveBlockIcons() {
+//     iconsInNav.after(iconsStatic);
+//     iconsStatic.style.paddingTop = '15px';
+// }
+// function disableMoveBlockIcons() {
+//     iconsInNav.after();
+//     iconsStatic.style.paddingTop = '0';
+// }
+// if (window.screen.availWidth <= 768) {
+//     moveBlockIcons();
+// }
+// else disableMoveBlockIcons();
