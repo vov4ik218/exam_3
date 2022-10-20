@@ -1101,7 +1101,7 @@ p {
 }
 @media screen and (max-width: 560px) {
   .roadmap-card {
-    margin: 0 10px 50px 10px;
+    margin: 0 10px 80px 10px;
   }
 }
 .roadmap-card:last-child {
@@ -1186,6 +1186,7 @@ p {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     text-align: center;
+    padding: 20px 14px 20px 14px;
   }
 }
 .roadmap-card__text {
@@ -1195,6 +1196,11 @@ p {
   font-weight: 400;
   line-height: 2.1em;
   color: #fff;
+}
+@media screen and (max-width: 425px) {
+  .roadmap-card__text {
+    line-height: 1.6em;
+  }
 }
 .roadmap-card__text p:nth-child(1) {
   padding: 0 0 20px 24px;

@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('.meta-label-slider').slick({
     dots: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     speed: 1000,
     infinit: true,
@@ -15,7 +15,6 @@ $(document).ready(function () {
     adptiveHeight: true,
   });
 });
-
 
 $('.wave-slider').slick({
   dots: false,
@@ -42,7 +41,6 @@ $('.wave-content-slider').slick({
   asNavFor: ".wave-slider , .meta-label-slider",
 
 });
-
 
 $('.team-slider').slick({
   arrows: true,

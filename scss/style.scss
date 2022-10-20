@@ -918,7 +918,7 @@ p {
     opacity: 0;
 
     @media screen and (max-width: 560px) {
-        margin: 0 10px 50px 10px;
+        margin: 0 10px 80px 10px;
     }
 
     &:last-child {
@@ -971,12 +971,17 @@ p {
             justify-content: center;
             flex-direction: column-reverse;
             text-align: center;
+            padding: 20px 14px 20px 14px;
         }
     }
 
     &__text {
         color: #fff;
         @include fonts($font_family_text, 12px, 400, 2.1em, #fff);
+
+        @media screen and (max-width: 425px) {
+            line-height: 1.6em;
+        }
 
         & p:nth-child(1) {
             padding: 0 0 20px 24px;
